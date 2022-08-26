@@ -7,17 +7,28 @@ body {
 
 /* Your code here */
 
+.navbar {
+    padding: 20px;
+    background-color:yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    color:grey
+}
+
 h1 {
     font-size: x-large;
-    background-color: yellow;
+    background-color:;
+    font-family: 'Open Sans' , serif;
+    text-align: center;
+
 
 }
 
-header {
 
-}
+main section {
 
-main img {
- 
-
+    display: inline-block;
+    margin: 20px;
 }
