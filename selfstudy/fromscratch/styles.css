@@ -1,9 +1,26 @@
 /* will the CSS override local css in the html? */
+body h1{
+    font-family: 'Source Code Pro', monospace;
+    color:darkgray;
+    text-align: center;
+}
+
 body{
     background-color: #151515;
     color: dimgray;
     text-align: center;
+}
 
+p{
+    color: darkgray;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+br {
+    color: dimgray;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a:hover {
