@@ -1,1 +1,14 @@
 /* will the CSS override local css in the html? */
+body{
+    background-color: #151515;
+    color: dimgray;
+    text-align: center;
+
+}
+
+
+section img {
+    display: inline-flexbox;
+    margin: 20px;
+    width: 40%;
+}
