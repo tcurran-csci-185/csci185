@@ -6,6 +6,9 @@ body{
 
 }
 
+a:hover {
+    opacity: 66%;
+}
 
 section img {
     display: inline-flexbox;
