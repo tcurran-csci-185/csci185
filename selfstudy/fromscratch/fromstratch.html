@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <!-- always include the lang attribute in the html tag. -->
     <head>
         <title> From Scratch </title>
     </head>
-    <body>
-        <h1> Is there a semantic tag for h1?</h1>
-        <p> Section class yada yada, what's the right terminology?</p>
+    <body style="background-color:black; color:darkgrey">
+        <h1 style="color: dimgray; font-size:30px"> Is there a semantic tag for h1?</h1>
+        <p title="mouse over to see me"> "The terminology is tagname.<br>
+             Note, double quotes do not cause tags to appear as
+            text"<br>
+             Tagnames refer to elements (i.e. p, body, etc)<br>
+             and this paragraph has a mousover tool tip.
+        </p>
+        
+        <p> Adding another paragraph tag here. A links destination is specified by the href 
+            attribute. I think without CSS this will all appear as one line. I guess by 
+            default it wraps at the window width.<br> 
+        </p>    
+            I'm adding some text here in order to test how the br tag works. 
+            The br tag indicates a line break. <br>
+            Always use lowecase attributes and put quotes around attribute values (even 
+            though neither are necessary.)
+            <br>I guess I need to learn more about how html treats white space.
+            <hr>
+            I'm using an hr "horizontal rules" tage here.
+            <hr>
+        </p>
+        <h2 style="color:dimgray; font-size: 30px;">Adding another header here</h2>    
+        <p><a title="Mouseoverlink" href="https://www.w3schools.com/html/html_basic.asp"
+        >This a link, its tag is "a"</a>
+        <br>
+        </p>
+        <p>
+        <img src="https://i.scdn.co/image/ab67616d0000b273640e5394fec20f4db7c1149d" 
+            alt="metamorphosis" >
+        <img src="./images/Metamorphosis-relative.jpg" 
+            alt="metamorphosis-relative">
+            <pre>
+                Use the pre tag
+                to preserve
+
+                the space and
+
+                line breaks of a piece of text
+                In a "fixed width" font.
+            </pre>
+        </p>
+        <p>
+
+        </p>
+        
     </body>
 </html>
