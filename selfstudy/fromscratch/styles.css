@@ -13,8 +13,12 @@ body{
 
 p{
     color: darkgray;
-    text-align: center;
+    text-align: justify;
     font-family: 'Open Sans', sans-serif;
+}
+
+p a {
+    text-align: center;
 }
 
 br {
