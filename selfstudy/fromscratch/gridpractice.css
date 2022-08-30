@@ -4,7 +4,7 @@
 
 /* -How can I get the text to be centered horizontally and vertically in each box? 
 --Answer: Switched .container .item from display:flex; to display:grid;
- 
+
  - Is there a way to put a border around the margin and padding to help visualize them?*/
 
 body{
@@ -14,12 +14,15 @@ body{
 .container {
     display: grid;
     grid-template-columns: 1fr 10% 1fr;
-    grid-template-rows: 1fr 10% 1fr;
+    grid-template-rows: 5% 1fr 10% 1fr ;
     grid-template-areas: 
+    "header header header"
     "box-1 box-2 box-3"
     "box-4 box-5 box-6"
-    "box-7 box-8 box-9";
-    min-height: 100vh
+    "box-7 box-8 box-9"
+    "footer footer footer";
+    min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .container .item {
@@ -28,6 +31,17 @@ body{
     align-content: center;
     text-align: center;
     display: grid;
+}
+
+.container .header {
+    grid-area:header;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container .footer {
+    grid-area: footer;
+    text-align: center;
 }
 
 .item-1 {
@@ -96,4 +110,8 @@ body{
     grid-area: box-9;
 }
 
-
+.image {
+    grid-area: box-8;
+    max-width: 10%;
+    align-items: center;
+}
