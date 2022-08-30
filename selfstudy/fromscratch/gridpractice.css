@@ -2,7 +2,9 @@
     outline: 1px solid black;
 }  */
 
-/* -How can I get the text to be centered horizontally and vertically in each box?
+/* -How can I get the text to be centered horizontally and vertically in each box? 
+--Answer: Switched .container .item from display:flex; to display:grid;
+ 
  - Is there a way to put a border around the margin and padding to help visualize them?*/
 
 body{
@@ -25,12 +27,12 @@ body{
     font-size: 60pt;
     align-content: center;
     text-align: center;
-    display: flex;
+    display: grid;
 }
 
 .item-1 {
     background-color: rgb(124, 44, 199); 
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border: solid 1px black;
     padding: 10%;
     margin:10px;
