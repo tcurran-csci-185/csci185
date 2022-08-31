@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(255, 230, 230);
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+
+.box1 {
+    padding: 5px;
+    border-radius: 20px;
+    border: 10px solid rgb(255, 63, 63);
+    margin: 20px;
+    grid-row: 4 / span 5;
+    grid-column: 2 /span 5;
+    background-color: white;
+}
+
+.box2 {
+    padding: 5px;
+    border-radius: 20px;
+    border: 10px solid rgb(255, 63, 63);
+    margin: 20px;
+    grid-row: 4 / span 5;
+    grid-column: 7 /span 12;
+    background-color: white;
+}
