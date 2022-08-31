@@ -17,7 +17,7 @@ body{
 .container {
     display: grid;
     grid-template-columns: 1fr 10% 1fr;
-    grid-template-rows: 5% 1fr 10% 1fr;
+    grid-template-rows: 5% 1fr 10% auto;
     grid-template-areas: 
     "header header header"
     "box-1 box-2 box-3"

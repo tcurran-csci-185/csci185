@@ -32,7 +32,10 @@ body {
 
 /* Task 1 */
 
-.task-1.container {
+.container {
+  display: grid;
+  grid-template-rows: auto 80vh auto;
+  /* use auto to prevent text overflow */
     
 }
 
