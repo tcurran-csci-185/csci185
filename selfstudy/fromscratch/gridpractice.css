@@ -6,6 +6,9 @@
 --Answer: Switched .container .item from display:flex; to display:grid;
 
  - Is there a way to put a border around the margin and padding to help visualize them?*/
+* {
+    box-sizing: border-box;
+}
 
 body{
     background-color: dimgray;
