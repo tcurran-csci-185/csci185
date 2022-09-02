@@ -1,0 +1,71 @@
+/* * {
+    box-sizing: border-box;
+    border: solid 2x black;
+} */
+
+body {
+    background-color: #252525;
+    font-family: 'Source Code Pro', monospace;
+    color:whitesmoke;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 30% 1fr;
+    grid-template-rows: repeat(9,fr);
+    grid-template-areas: 
+    "h1 h1 h1"
+    "box-1 box-2 box3"
+    "box-4 box-5 box-6"
+    "box-7 box-8 box-9"
+    "box-10 box-11 box12";
+    margin: 20px;
+}
+
+h1 {
+    box-sizing: border-box;
+    padding: 20px;
+    grid-area: h1;
+    border: solid 10px #9400FF;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+h2 {
+    /* border: solid 10px #9400FF;
+    border-radius: 10px; */
+}
+
+.tutorials {
+    grid-area:box-2;
+    border: solid 10px #9400FF;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.homework {
+    grid-area:box-5;
+}
+
+.inspiration {
+    grid-area: box-8;
+}
+
+.inspiration .links {
+    text-align: justify;
+}
+
+.item {
+    border: solid 10px #9400FF;
+    border-radius: 10px;
+    padding: 5%;
+    margin:20px;
+}
+
+a {
+    color:yellow;
+}
+a:hover {
+    
+}
