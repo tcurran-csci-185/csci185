@@ -33,12 +33,21 @@ body {
 /* Task 3 */
 
 .task-3.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 50px 50px auto 50px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
-
-.task-3 .header {
+ .header {
+  grid-row-start: 1;
+  grid-row-end:span 3;
+  grid-column-start: 1;
 }
 
 .task-3 .navigation {
+  grid-row-start: 2;
 }
 
 .task-3 .ads {
