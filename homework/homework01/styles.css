@@ -8,6 +8,58 @@ body * {
 
 body {
     margin: 0;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 /* Your CSS Code Here! */
+
+
+header {
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+header ul {
+    list-style: none;
+    color: white;
+    text-align: right;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul li {
+    padding: 1%;
+    padding-left: 1%;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+header ul a:link {
+    text-decoration: none;
+    color: white;
+}
+
+header img {
+    border-radius: 50%;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+}
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* This seems to work with the window at 50% width... is this a kludge? */
+#about {
+    display: flexbox;
+    justify-content: center;
+    margin: 20%;
+    text-align: justify;
+}
