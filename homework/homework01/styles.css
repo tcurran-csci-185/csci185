@@ -13,12 +13,17 @@ body {
 
 /* Your CSS Code Here! */
 
-/* Why is there this gap at the top of the page? */
+/* Why is there this gap at the top of the page? because of h1 tag or
+in this case setting ul margin to 0*/
 header {
     background-color: steelblue;
     color: white;
     text-align: center;
     border-radius: 5px;
+}
+
+ul {
+    margin:0;
 }
 
 header ul {
@@ -83,6 +88,9 @@ Maybe use flex here instead?*/
     grid-column-start: 2;
 }
 
+.card img {
+    width: 100%;
+}
 .card-1 {
     grid-column-start: 2;
     grid-row-start: 2;
@@ -105,14 +113,22 @@ Maybe use flex here instead?*/
 /* how can I define the maximum height for this container? I want to add rows to position
 the title/text/buttons. Would it be better to use grid template areas?*/
 #contact {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 25% 25% 1fr;
-    grid-template-rows: 100px 100px 100px 100px;
-    padding: 50px; 
+    grid-template-rows: 100px 100px 100px 100px; */
+    padding-left: 15vw;
+    padding-right: 15vw;
+    /* padding: 50px;  */
 }
 
+.contact-details {
+    display: grid;
+    grid-template-columns: 3fr 2fr ;
+}
+
+
 /* "Get In Touch" I don't know where to start with this. Is this a use case for grid? */
-#contact h2 {
+/* #contact h2 {
     display: grid;
     grid-column-start: 2;
 }
@@ -133,10 +149,16 @@ the title/text/buttons. Would it be better to use grid template areas?*/
     display: grid;
     grid-column-start: 2;
     grid-row-start: 3;
-}
+} */
 
 /* I added a container for the footer in the html... I think I've been looking at this for
 too long. */
+
+.contact-details .contact-details form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
 .footer-container {
     display: flex;
     background-color: lightgray;
