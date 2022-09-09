@@ -73,8 +73,6 @@ flexbox is an 'invalid propery value' */
     padding: 50px;
 }
 
-/* in the example Projects is in the grey area and aligned differently, is this a requirement? */
-
 /* Is this an ok way to do this? Is there a better way? */
 #project-header {
     grid-column-start: 2;
@@ -99,15 +97,37 @@ flexbox is an 'invalid propery value' */
     grid-row-start: 3;
 }
 
+/* how can I define the maximum height for this container? I want to add rows to position
+the title/text/buttons. Would it be better to use grid template areas?*/
 #contact {
     display: grid;
-    grid-template-columns: auto auto;
-    padding: 50px;  
+    grid-template-columns: 1fr 25% 25% 1fr;
+    grid-template-rows: 100px 100px 100px 100px;
+    padding: 50px; 
 }
 
-/* "Get In Touch" I don't know where to start with this. */
-.row {
+/* "Get In Touch" I don't know where to start with this. Is this a use case for grid? */
+#contact h2 {
+    display: grid;
+    grid-column-start: 2;
+}
 
+#contact p {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end:span 2;
+    grid-row-start: 2 ;
+}
+
+.fa-solid {
+    display:grid;
+    grid-column-start: 3;
+}
+
+#contact form {
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 3;
 }
 
 /* I added a container for the footer in the html... I think I've been looking at this for
