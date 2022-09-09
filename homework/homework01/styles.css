@@ -13,7 +13,7 @@ body {
 
 /* Your CSS Code Here! */
 
-
+/* Why is there this gap at the top of the page? */
 header {
     background-color: steelblue;
     color: white;
@@ -56,10 +56,69 @@ h2 {
     font-family: 'Rubik', sans-serif;
 }
 
-/* This seems to work with the window at 50% width... is this a kludge? */
+/* This seems to work with the window at 50% width... is this a kludge? Inspector says
+flexbox is an 'invalid propery value' */
 #about {
     display: flexbox;
-    justify-content: center;
     margin: 20%;
-    text-align: justify;
+}
+
+.project-holder{
+    display: grid;
+    grid-template-columns: 1fr 25% 25% 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    background-color: lightgrey;
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+    padding: 50px;
+}
+
+/* in the example Projects is in the grey area and aligned differently, is this a requirement? */
+
+/* Is this an ok way to do this? Is there a better way? */
+#project-header {
+    grid-column-start: 2;
+}
+
+.card-1 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.card-2 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+.card-3 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.card-4 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 50px;  
+}
+
+/* "Get In Touch" I don't know where to start with this. */
+.row {
+
+}
+
+/* I added a container for the footer in the html... I think I've been looking at this for
+too long. */
+.footer-container {
+    display: flex;
+    background-color: lightgray;
+    min-height: 100px;
+}
+
+footer {
+    background-color: lightgrey;
+    
 }
