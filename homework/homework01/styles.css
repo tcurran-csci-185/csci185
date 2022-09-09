@@ -13,8 +13,8 @@ body {
 
 /* Your CSS Code Here! */
 
-/* Why is there this gap at the top of the page? because of h1 tag or
-in this case setting ul margin to 0*/
+/* Why is there this gap at the top of the page? Answer: because of h1 or ul tag, fix by
+setting margin to zero.*/
 header {
     background-color: steelblue;
     color: white;
@@ -64,8 +64,9 @@ h2 {
 /* This seems to work with the window at 50% width... is this a kludge? Inspector says
 flexbox is an 'invalid propery value' */
 #about {
-    display: flexbox;
-    margin: 20%;
+    display: flex;
+    padding:10vh 20vw;
+    flex-direction: column;
 }
 
 .project-holder{
@@ -77,8 +78,6 @@ flexbox is an 'invalid propery value' */
     grid-column-gap: 50px;
     padding: 50px;
 }
-
-/* in the example Projects is in the grey area and aligned differently, is this a requirement? */
 
 /* Is this an ok way to do this? Is there a better way? 
 Note: this breaks (the pics lose their margin) when
@@ -116,9 +115,10 @@ the title/text/buttons. Would it be better to use grid template areas?*/
     /* display: grid;
     grid-template-columns: 1fr 25% 25% 1fr;
     grid-template-rows: 100px 100px 100px 100px; */
-    padding-left: 15vw;
-    padding-right: 15vw;
+    /* padding-left: 15vw;
+    padding-right: 15vw; */
     /* padding: 50px;  */
+    padding:5vh 15vw;
 }
 
 .contact-details {
@@ -151,21 +151,15 @@ the title/text/buttons. Would it be better to use grid template areas?*/
     grid-row-start: 3;
 } */
 
-/* I added a container for the footer in the html... I think I've been looking at this for
-too long. */
-
 .contact-details .contact-details form {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.footer-container {
+footer {
     display: flex;
     background-color: lightgray;
-    min-height: 100px;
-}
-
-footer {
-    background-color: lightgrey;
-    
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
 }
