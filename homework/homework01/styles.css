@@ -73,16 +73,12 @@ flexbox is an 'invalid propery value' */
     padding: 50px;
 }
 
-<<<<<<< HEAD
 /* in the example Projects is in the grey area and aligned differently, is this a requirement? */
 
 /* Is this an ok way to do this? Is there a better way? 
 Note: this breaks (the pics lose their margin) when
 the window size gets too small.
 Maybe use flex here instead?*/
-=======
-/* Is this an ok way to do this? Is there a better way? */
->>>>>>> 5aa95c6bd17185af5757056ec8febde0bdbf2be7
 #project-header {
     grid-column-start: 2;
 }
