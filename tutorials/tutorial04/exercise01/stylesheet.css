@@ -32,15 +32,20 @@ nav a {
     padding-left: 30px;
 }
 
-/* How do I center the #images flex container vertically within main? */
+/* How do I center the #images flex container vertically within main?  
+I used margin to make it look similar, but this feels hacky / the page
+is super unresponsive*/
+
 main {
-  margin: 10%;
+    margin-top: 25vh;
 }
+
 
 #images {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    column-gap: 20px;
 }
 
 footer {
