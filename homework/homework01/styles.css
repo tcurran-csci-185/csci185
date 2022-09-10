@@ -65,7 +65,7 @@ h2 {
 flexbox is an 'invalid propery value' */
 #about {
     display: flex;
-    padding:10vh 20vw;
+    padding:10vh 25vw;
     flex-direction: column;
 }
 
@@ -112,57 +112,64 @@ Maybe use flex here instead?*/
 /* how can I define the maximum height for this container? I want to add rows to position
 the title/text/buttons. Would it be better to use grid template areas?*/
 #contact {
-    /* display: grid;
-    grid-template-columns: 1fr 25% 25% 1fr;
-    grid-template-rows: 100px 100px 100px 100px; */
-    /* padding-left: 15vw;
-    padding-right: 15vw; */
-    /* padding: 50px;  */
-    padding:5vh 15vw;
+    padding:5vh 25vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .contact-details {
     display: grid;
     grid-template-columns: 3fr 2fr ;
+    column-gap: 20px;
+    font-family: inherit;
 }
 
 .form {
     display:grid;
+    row-gap: 10px;
+    column-gap: 100px;
 }
 
 #contact-info {
     display: flex;
     flex-direction: column;
 }
-/* "Get In Touch" I don't know where to start with this. Is this a use case for grid? */
-/* #contact h2 {
+
+.contact-details .row1 {
     display: grid;
-    grid-column-start: 2;
+    grid-template-columns: 2fr 3fr;
 }
 
-#contact p {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end:span 2;
-    grid-row-start: 2 ;
+#name {
+    background-color: lightgray;
+    border-radius: 5px;
+    margin:5px;
 }
 
-.fa-solid {
-    display:grid;
-    grid-column-start: 3;
+#email {
+    background-color: lightgray;
+    border-radius: 5px;
+    margin:5px;
 }
 
-#contact form {
-    display: grid;
-    grid-column-start: 2;
-    grid-row-start: 3;
-} */
+#message {
+    background-color: lightgrey;
+    border-radius: 5px;
+    margin: 5px;
+    padding:5px;
 
+}
+
+#submit {
+    padding: 10px;
+    margin: 5px;
+    background-color: darkgreen;
+    border-radius: 5px;
+}
 
 footer {
     display: flex;
     background-color: lightgray;
     text-align: center;
     justify-content: center;
-    padding: 50px;
+    padding: 20px;
 }
