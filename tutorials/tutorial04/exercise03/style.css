@@ -20,24 +20,21 @@ section {
     justify-content: center;
     background-color: #3d5a80;
     color: white;
+    min-height: 100vh;
 }
 
 #home {
-    min-height: 100vh;
     background-color: #98c1d9;
 }
 
 #bio {
-    min-height: 100vh;
     background-color: #a1bcbd;
 }
 
 #portfolio {
-    min-height: 100vh;
     background-color: #c7593d;
 }
 
 #contact {
-    min-height: 100vh;
     background-color: #293241;
 }
