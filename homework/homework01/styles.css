@@ -112,7 +112,7 @@ Maybe use flex here instead?*/
 
 /* how can I define the maximum height for this container? I want to add rows to position
 the title/text/buttons. Would it be better to use grid template areas?*/
-#contact {
+/* #contact {
     padding:5vh 25vw;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -131,13 +131,18 @@ the title/text/buttons. Would it be better to use grid template areas?*/
 }
 
 #contact-info {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 40px auto;
+}
+
+.fa-solid {
+    grid-column-start: 1;
+    grid-column-end: 1;
 }
 
 .contact-details .row1 {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 30% 60%;
 }
 
 #name {
@@ -153,6 +158,8 @@ the title/text/buttons. Would it be better to use grid template areas?*/
 }
 
 #message {
+    display: grid;
+    
     background-color: lightgrey;
     border-radius: 5px;
     margin: 5px;
@@ -165,6 +172,53 @@ the title/text/buttons. Would it be better to use grid template areas?*/
     margin: 5px;
     background-color: darkgreen;
     border-radius: 5px;
+} */
+
+#contact {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 20px;
+}
+
+#contact-info .row {
+    display: grid;
+    grid-template-columns: 40px auto;
+    margin-bottom: 20px;
+}
+
+.row p {
+    margin: 0px;
+}
+
+.row1 {
+    display: grid;
+    grid-template-columns: 40% auto;
+    column-gap: 10px;
+}
+
+form .row {
+    margin-bottom: 10px;
+}
+
+#message {
+    width: 100%;
+}
+
+input, textarea {
+    padding: 10px;
+    background: lightgrey;
+    border: none;
+    border-radius: 5px;
+}
+
+#submit {
+    background-color: teal;
+    color: white;
 }
 
 footer {
