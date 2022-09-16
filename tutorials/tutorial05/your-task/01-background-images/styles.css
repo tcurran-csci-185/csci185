@@ -24,11 +24,12 @@ header {
     justify-content: center; /* horizontal-align text in the center */
     
     
-    /* background-image: url('solar-eclipse.jpg');
+    background-image: url('analemna1.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 40vh;
     background-position-x: center;
-    background-position-y: center; */
+    /* background-position-y: center; */
+    background-attachment: fixed;
 }
 
 section {
@@ -39,11 +40,11 @@ section {
     background-color: black;
     padding-left: 0px;
 
-    /* background-image: url('solar-eclipse-multiples.jpg');
+    background-image: url('analemma2.jpg');
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
-    background-attachment: fixed; */
+    background-attachment: fixed;
 }
 
 .text-container {
@@ -56,6 +57,7 @@ section {
 p {
     font-size: 1.2em;
     line-height: 1.7em;
+    opacity: 75%;
 }
 
 footer {
