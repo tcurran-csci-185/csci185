@@ -22,11 +22,11 @@ section {
 }
 
 #s1 {
-    grid-area: 1 / 1 / 1 / span 2 ;
+    grid-area: 1 / 1 / 1 / span 2;
 }
 
 #s2 {
-    grid-area: 1 / 3 / span 2 / 3 ;
+    grid-area: 1 / 3 / span 2 / 3;
 }
 
 #s3 {
