@@ -1,9 +1,13 @@
 const makeBigger = () => {
-   alert('make bigger!');
+   // alert('make bigger!');
+   document.querySelector("p").style.fontSize = "2em";
+   document.querySelector("h1").style.fontSize = "2em";
 };
 
 const makeSmaller = () => {
-   alert('make smaller!');
+   // alert('make smaller!');
+   document.querySelector("p").style.fontSize = ".5em";
+   document.querySelector("h1").style.fontSize = ".5em";
 };
 
 /*
