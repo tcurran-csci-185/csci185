@@ -20,6 +20,10 @@ const highContrastTheme = ev => {
 
 }; 
 
+const dyslexiaMode = ev => {
+    document.querySelector("body").className = "dyslexia-mode"
+}
+
 /*
     Hints: 
     1. Attach the event handlers (functions) above to the click event

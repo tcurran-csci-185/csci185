@@ -127,17 +127,42 @@ h1 {
     font-weight: 600;
 
     font-size: 150%;
+}
 
+.dyslexia-mode div {
+    padding-left: 20%;
+
+    padding-right: 20%;
 }
 
 .dyslexia-mode strong {
     color: #000;
 }
 
-.dylexia-mode main {
+.dyslexia-mode main {
     line-height: 2.0;
 }
 
 .dyslexia-mode {
     margin-top: 3.5em;
+}
+
+/* double check below here */
+
+@media(min-width:700px) { 
+    body:not(.dyslexia-mode) main {
+      background-image: url(https://res.cloudinary.com/jbowtie/image/upload/v1631662164/exclusive_paper_dyitgt.webp);
+    }
+  }
+
+.dyslexia-mode h2 {
+    border: none; border-bottom: thin grey solid;
+    max-width: 100%;
+    transform: none;
+    background-color: inherit; 
+    margin-bottom: 1em; padding-left:0;
+  }
+
+  .dyslexia-mode main li:nth-of-type(odd) {
+    background-color: palegoldenrod;
 }
