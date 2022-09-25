@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Spotify Player</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="player.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="index.js" defer></script>
     </head>
     <body id="container">
         <aside id="sidebar">
@@ -44,7 +45,7 @@
             <article id="featured-content">
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="A photo of the band King Gizard and the Lizard Wizard"
                             src="https://i.scdn.co/image/ab6761610000f178ae21e90221e814c50033133a" />
                         <div class="card-footer">
                             <div>
@@ -58,7 +59,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="A photo of the artist, Benny Goodman"
                             src="https://media.nativedsd.com/storage/nativedsd.com/wp-content/uploads/2020/09/15091529/0132805-scaled.jpg" />
                         <div class="card-footer">
                             <div>
@@ -72,7 +73,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="An image of Scooby Do dressed as batman driving the Batmobile"
                             src="../homework01/images/maxresdefault-90526392.jpg" />
                         <div class="card-footer">
                             <div>
@@ -86,7 +87,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="A photo from homework one given the alt 'A picture of the author' in that assignment"
                             src="../homework01/images/profile.jpg" />
                         <div class="card-footer">
                             <h2>A Picture of the Author</h2>
@@ -98,7 +99,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="A photo of  Rihanna"
                             src="https://i.scdn.co/image/1fc2f537d678d701d7d143a8fd4f0c2f29fbde22" />
                         <div class="card-footer">
                             <h2>Rihanna</h2>
@@ -110,7 +111,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="A photo of the characters from ''Don't Hug me I'm Scared''"
                             src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyt3.ggpht.com%2Fa%2FAGF-l7-196VtusdwEDmU48m9UQq0Y3ut5G9w3WVS%3Ds900-c-k-c0xffffffff-no-rj-mo&f=1&nofb=1&ipt=9fd77a3eb1b640843d6e917877560f1661a8a00a35d2c58d2b395334765cd14b&ipo=images" />
                         <div class="card-footer">
                             <h2>Ariana Grande</h2>
@@ -122,7 +123,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="A photo of an Owl"
                             src="https://i.scdn.co/image/74f79edd78bb72e3e4140f50407a59879843572c" />
                         <div class="card-footer">
                             <h2>Owl Sounds</h2>
@@ -134,7 +135,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="A photo of the artist Solange Knowles"
                             src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.genius.com%2Fed5cd56aba0fc1ca577a2a67dd5efe9c.1000x1000x1.jpg&f=1&nofb=1&ipt=521cda86ccad9524f66e0eebe4f8152fd6ffa5aa76d5ce51ff1cdf2ce449a23d&ipo=images" />
                         <div class="card-footer">
                             <h2>Solange</h2>
@@ -146,7 +147,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="A photo of a Common Loon (a bird)"
                             src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flakesullivan.org%2Fwp-content%2Fuploads%2F2015%2F04%2Fcommon-loon-nina-stavlund.jpg&f=1&nofb=1&ipt=e58ab65f315568cb7371677f07f4fef80064357566897fb99ff0812608393e04&ipo=images" />
                         <div class="card-footer">
                             <h2>Common Loon</h2>
@@ -158,7 +159,7 @@
 
                 <section class="artist-card" tabindex="0">
                     <div>
-                        <img 
+                        <img alt="An image of the NOAA's logo (National Weather Service)"
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Noaa_all_hazards.svg/1280px-Noaa_all_hazards.svg.png" />
                         <div class="card-footer">
                             <h2>EAS Required Weekly Test (RWT)</h2>
@@ -173,17 +174,17 @@
         </main>
         <footer>
             <div class="current-song">
-                <img src="https://i.scdn.co/image/5d6e2a7429fa5e1b8b833b4e153c7a4f190dfe67">
+                <img alt="A photo of the album cover of 'You Died'" src="../homework01/images/youdied.jpg">
                 <div class="label">
-                    <footer></footer><h2>Jump Then Fall</h2>
-                    <p>Taylor Swift</p>
+                    <footer></footer><h2>Night light</h2>
+                    <p>99 Jakes</p>
                 </div>
             </div>
             <div class="player">
                 <div class="controls">
-                    <button><i class="fas fa-step-backward"></i></button>
-                    <button><i class="far fa-play-circle"></i></button>
-                    <button><i class="fas fa-step-forward"></i></button>
+                    <button><i class="fas fa-step-backward"> Step backward</i></button>
+                    <button><i class="far fa-play-circle"> Play</i></button>
+                    <button><i class="fas fa-step-forward"> Step forward</i></button>
                 </div>
                 <div class="slider">
                     <audio preload class="audio">
