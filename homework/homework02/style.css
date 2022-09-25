@@ -116,7 +116,7 @@ header {
 }
 
 #upgrade {
-    font-size: 1.7em;
+    font-size: 1.7rem;
     border: solid;
     padding-left: 60px;
     padding-right: 60px;
@@ -127,7 +127,7 @@ header {
 }
 
 #profile {
-    font-size: 1.7em;
+    font-size: 1.7rem;
     background-color: #222;
     border: solid #222;
     padding-left: 60px;
@@ -147,7 +147,7 @@ nav {
     padding: 20px;
     margin-left: 50px;
     font-weight: bold;
-    font-size: 1.6em;
+    font-size: 1.6rem;
 }
 
 
@@ -170,11 +170,11 @@ nav {
 
 .artist-card {
     background-color: #222;
-    max-width: 350px;
-    padding: 40px;
-    padding-bottom: 100px;
+    max-width: 15%;
+    padding: 1%;
+    padding-bottom: 1%;
     border-radius: 5%;
-    margin: 20px;
+    margin: 1%;
 }
 
 .artist-card div img {
@@ -206,11 +206,11 @@ nav {
     
     .artist-card {
         background-color: #222;
-        max-width: 220px;
-        padding: 40px;
-        padding-bottom: 100px;
+        max-width: 26%;
+        padding: 1%;
+        padding-bottom: 1%;
         border-radius: 5%;
-        margin: 20px;
+        margin: 1%;
     }
     
     .artist-card div img {
@@ -226,6 +226,17 @@ nav {
         * The aside panel and "Upgrade" button should no longer be visible.
         * There should only be a 1-column layout.
     */
+    body {
+        overflow: hidden;
+        margin: 0px;
+        height: 100vh;
+        /* body tag is a grid */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 100px;
+        background-color: #222;
+    }
+
     #featured-content {
         display: flex;
         flex-direction: row;
@@ -236,11 +247,11 @@ nav {
     
     .artist-card {
         background-color: #222;
-        max-width: 240px;
-        padding: 40px;
-        padding-bottom: 100px;
+        max-width: 40%;
+        padding: 1%;
+        padding-bottom: 1%;
         border-radius: 5%;
-        margin: 20px;
+        margin: 1%;
     }
     
     .artist-card div img {
