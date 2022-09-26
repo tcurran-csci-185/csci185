@@ -25,7 +25,7 @@ body {
     /* body tag is a grid */
     display: grid;
     grid-template-columns: 19% auto;
-    grid-template-rows: auto 100px;
+    grid-template-rows: auto 13%;
     background-color: #222;
 }
 aside {
@@ -120,10 +120,14 @@ header {
     border: solid;
     padding-left: 60px;
     padding-right: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 4px 2px;
-    border-radius: 30px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 1%;
+    border-radius: 50px;
+}
+
+#upgrade:hover {
+    background-color: #666;
 }
 
 #profile {
@@ -132,24 +136,46 @@ header {
     border: solid #222;
     padding-left: 60px;
     padding-right: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    border-radius: 30px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 1%;
+    border-radius: 50px;
+}
+
+#profile:hover {
+    background-color: #666;
+    border: solid #666;
 }
 
 nav {
     flex-direction: row;
-    column-gap: 5vw;
+    column-gap: 3vw;
     padding: 20px;
     margin-left: 50px;
     font-weight: bold;
     font-size: 1.6rem;
 }
 
+nav .selected {
+    border-bottom: solid green;
+}
+
+nav a:hover {
+    border-bottom: solid green;
+}
+
+#sidebar a {
+    border-left: solid black;
+    color: rgb(220, 220, 220);
+}
+
+#sidebar a:hover {
+    color: white;
+}
+
+#sidebar .selected {
+    border-left: solid green;
+}
 
 
 /*************************/
@@ -181,11 +207,6 @@ nav {
     width: 100%;
     border-radius: 50%;
 }
-
-.doggo {
-    width: 150%;
-}
-
 
 
 /**************************/
