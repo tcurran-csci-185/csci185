@@ -2,7 +2,9 @@ function setup() {
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight; 
     createCanvas(canvasWidth, canvasHeight);
-    
+    // Invoke all funtcions inside of setup //
+
+
     ////////////
     // POINTS //
     ////////////
