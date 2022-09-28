@@ -4,7 +4,11 @@ function setup() {
     createCanvas(canvasWidth, canvasHeight);
 
     // Exercise 1:
-    drawCircle();
+    drawCircle(300, 300, 50, 'violet');
+    drawCircle(200, 300, 50, 'teal');
+    drawCircle(400, 400, 50, 'lightblue');
+
+
 
     // Exercise 2: 
     drawOval();
@@ -21,9 +25,9 @@ function setup() {
 
 // modify this function so that it accepts and honors
 // the following parameters: centerX, centerY, size, and fillColor
-function drawCircle() {
-    fill('hotpink');
-    circle(100, 100, 100);
+function drawCircle(centerX, centerY, size, fillColor) {
+    fill(fillColor);
+    circle(centerX, centerY, size);
 }
 
 // modify this function so that it accepts and honors
