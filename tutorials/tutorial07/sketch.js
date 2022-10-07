@@ -4,31 +4,20 @@ function setup() {
     createCanvas(canvasWidth, canvasHeight);
 
     // Exercise 1:
-    // drawCircle(100, 100, 25, 'yellow')
-    // drawCircle(200, 200, 50, 'violet');
-    // drawCircle(300, 300, 100, 'teal');
-    // drawCircle(400, 400, 200, 'lightblue');
-    // drawCircle(300, 300, 50, 'violet');
-
-    drawCircle(100, 100, 100, 'violet');
-    drawCircle(300, 100, 50, 'violet');
-    drawCircle(500, 100, 100, 'violet');
-    drawCircle(700, 100, 50, 'violet');
-
-
-
+    drawCircle();
 
     // Exercise 2: 
     drawOval();
 
     // Exercise 3:
-    drawBullseye(100, 300, 100);
-    drawBullseye(300, 300, 50);
-    drawBullseye(500, 300, 100);
-    drawBullseye(700, 300, 50);
+    drawBullseye();
 
     // Exercise 4:
-    drawFace();
+    drawFace(100, 400, 50);
+    drawFace(200, 400, 100, 'lavender');
+    drawFace(300, 400, 50);
+    drawFace(400, 400, 100);
+    drawFace(600, 400, 250);
 
     drawGrid(canvasWidth, canvasHeight);
 }
@@ -36,9 +25,9 @@ function setup() {
 
 // modify this function so that it accepts and honors
 // the following parameters: centerX, centerY, size, and fillColor
-function drawCircle(centerX, centerY, size, fillColor) {
-    fill(fillColor);
-    circle(centerX, centerY, size);
+function drawCircle() {
+    fill('hotpink');
+    circle(100, 100, 100);
 }
 
 // modify this function so that it accepts and honors
@@ -51,23 +40,51 @@ function drawOval() {
 
 // modify this function so that it accepts and honors
 // the following 3 parameters: centerX, centerY, and size
-function drawBullseye(centerX, centerY, size, color1, color2) {
+function drawBullseye() {
     fill('teal');
-    circle(centerX, centerY, size);
+    circle(100, 300, 100);
     fill('navy');
-    circle(centerX, centerY, size * .75);
+    circle(100, 300, 75);
     fill('teal');
-    circle(centerX, centerY, size * .5);
+    circle(100, 300, 50);
     fill('navy');
-    circle(centerX, centerY, size * .25);
+    circle(100, 300, 25);
 }
 
 // modify this function so that it accepts and honors
 // the following 3 parameters: centerX, centerY, and size
-function drawFace() {
-    fill('white');
-    circle(100, 400, 50);
+function drawFace(centerX, centerY, size, faceColor='yellow') {
+    strokeWeight(0);
+    fill(faceColor);
+    circle(centerX, centerY, size); // 100, 400, 50
     fill('black');
-    circle(92, 392, 8);
-    circle(108, 392, 8);
+    let sf = size / 6.5;
+    circle(centerX - sf, centerY - sf, sf);     // left eye
+    circle(centerX + sf, centerY - sf, sf);    // right eye
+
+    // make a mouth:
+    strokeWeight(size / 25);
+
+    // Method 0: No curve (just a start point and an end point)
+    // line(
+    //     centerX - sf*2, // x1
+    //     centerY + sf, // y1
+    //     centerX + sf*1.9, // x2
+    //     centerY + sf  // y2
+    // );
+
+    // Method 1: Curve Technique (courtesey of samples)
+    noFill()
+    stroke('black');
+    curve(
+        centerX - sf*2, centerY - 1.5*size, // control point with small y-coordinate (which bends the curve down from the left)
+        centerX - sf*2, centerY + 0.8 * sf, // start point
+        centerX + sf*2, centerY + 0.8 * sf, // end point
+        centerX + sf*2, centerY - 1.5*size  // control point with small y-coordinate (which bends the curve down from the right)
+    );
+
+
+    // Method 2: Arc Technique (courtesey of Ari)
+    // noFill();
+    // arc(centerX, centerY, size/2, size/2, 0.5, -10, OPEN);
 }

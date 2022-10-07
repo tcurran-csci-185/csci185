@@ -2,27 +2,19 @@ function setup() {
     const canvasWidth = window.innerWidth;
     const canvasHeight = window.innerHeight; 
     createCanvas(canvasWidth, canvasHeight);
-    // Invoke all funtcions inside of setup //
-
-
+    
     ////////////
     // POINTS //
     ////////////
     // https://p5js.org/reference/#/p5/point
-    strokeWeight(1);
-    stroke(666)
+    strokeWeight(10);
     point(110, 20);
-    // point(120, 40);
-    // point(130, 20);
-    // point(140, 40);
-    // point(150, 20);
-    // point(160, 40);
-    // point(170, 20);
-
-    circle(500, 500, 100)
-    text('here is some text', 100, 100)
-
-    // USE DOCUMENTATION AKA RTFM // 
+    point(120, 40);
+    point(130, 20);
+    point(140, 40);
+    point(150, 20);
+    point(160, 40);
+    point(170, 20);
 
     //////////
     // TEXT //
