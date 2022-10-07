@@ -40,6 +40,8 @@ function setup() {
 
 // Why does it seem like everything has a border now??
 // probably a much smarter way to do the calculations...
+// let xAdjust = centerX + size ...
+// https://soundcloud.com/blankbanshee/anxiety-online
 function drawCreature(centerX, centerY, size, primaryColor='black', secondaryColor='white') {
     fill('grey')
     square(centerX + size * .09, centerY + size  * .09, size * 1.02); 
