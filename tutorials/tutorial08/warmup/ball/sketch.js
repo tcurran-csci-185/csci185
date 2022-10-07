@@ -9,8 +9,14 @@ let x = 200;
 let speed = 5;
 
 function draw() {
-    // frameRate(4);
+    frameRate(30);
     clear();
+// when the ball hits the right wall, make it bounce
+    if (x >= 475) {
+        speed = (speed + 10) * -1;
+    } else if (x <= 175) {
+        speed = (-1 * speed + 10);
+    }
 
     // draw walls:
     fill('red');

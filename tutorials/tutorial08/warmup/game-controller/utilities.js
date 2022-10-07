@@ -1,4 +1,4 @@
-function drawGrid(canvasWidth, canvasHeight, color='black') {
+    function drawGrid(canvasWidth, canvasHeight, color='black') {
     textSize(10);
     textStyle(NORMAL);
     // strokeColor(color);
