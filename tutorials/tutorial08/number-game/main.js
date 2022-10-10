@@ -2,8 +2,56 @@
 const secret = Math.floor(Math.random() * 99) + 1;
 document.querySelector('#secret').innerHTML = secret;
 
+//make a counter!
+let counter = 0;
+
 
 function check() {
     // your code here.
-    console.log("your code here!");
+    // counter += 1;
+    // counter++
+    counter = counter + 1
+    // 1) get user input and store in a varaiable
+    let userGuess = document.querySelector('#guess').value;
+    console.log(userGuess);
+
+    // 2) convert the value (string) to a number
+    userGuess = Number(userGuess)
+    console.log(userGuess)
+
+    // 3) check if useer input is the same as "secret"
+    // psuedo code if 'guess' === 'secret": You win
+    // if 'guess' < 'secret': Too high!
+    // if 'guess' > 'secret': Too low!
+    // if 'guess' === 69: nice
+    // if 'guess' === 420: Way too high (emoji)
+    // if 'guess' === 42069: GIGACHAD
+    if (userGuess === 420) {
+        console.log('Way too high')
+        document.querySelector('#message').innerHTML = "(Way too high) BLAZE IT"
+
+    } else if (userGuess === 69 && secret) {
+        console.log('NICE WIN')
+        document.querySelector('#message').innerHTML = "NICE WIN"
+
+    } else if (userGuess === secret) {
+        console.log('You Win!')
+        document.querySelector('#message').innerHTML = 'You win!';
+        document.querySelector('#celebrate').className = ''
+
+    } else if (userGuess < secret) {
+        console.log('Too Low!')
+        document.querySelector('#message').innerHTML = 'Too Low!'
+
+    } else if (userGuess === secret && 69) {
+        console.log('NICE WIN')
+        document.querySelector('#message').innerHTML = "NICE WIN"
+
+    } else if (userGuess > secret) {
+        console.log('Too High!');
+        document.querySelector('#message').innerHTML = 'Too High!'
+    } 
+ 
+    document.querySelector('#num-guesses').innerHTML
+    = 'You have guessed ' + counter + ' time(s)'
 }
