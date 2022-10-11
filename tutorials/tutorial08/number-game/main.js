@@ -23,29 +23,19 @@ function check() {
     // psuedo code if 'guess' === 'secret": You win
     // if 'guess' < 'secret': Too high!
     // if 'guess' > 'secret': Too low!
-    // if 'guess' === 69: nice
     // if 'guess' === 420: Way too high (emoji)
-    // if 'guess' === 42069: GIGACHAD
     if (userGuess === 420) {
         console.log('Way too high')
-        document.querySelector('#message').innerHTML = "(Way too high) BLAZE IT"
-
-    } else if (userGuess === 69 && secret) {
-        console.log('NICE WIN')
-        document.querySelector('#message').innerHTML = "NICE WIN"
+        document.querySelector('#message').innerHTML = "Way too high"
 
     } else if (userGuess === secret) {
         console.log('You Win!')
-        document.querySelector('#message').innerHTML = 'You win!';
+        document.querySelector('#message').innerHTML = "You're the Moon Master";
         document.querySelector('#celebrate').className = ''
 
     } else if (userGuess < secret) {
         console.log('Too Low!')
         document.querySelector('#message').innerHTML = 'Too Low!'
-
-    } else if (userGuess === secret && 69) {
-        console.log('NICE WIN')
-        document.querySelector('#message').innerHTML = "NICE WIN"
 
     } else if (userGuess > secret) {
         console.log('Too High!');
