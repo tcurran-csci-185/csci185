@@ -8,6 +8,8 @@ function setup() {
     // Once you've created your drawCreature function, 
     // invoke drawCreature 5 times with the following arguments
     // (feel free to change the sizes, positions, and colors):
+    // Probably could create function to automate 
+    // scaling...
     
     drawCreature(709, 413, 166, 'black', 'white');
     drawCreature(683, 13, 233, '#800080', '#008080');
