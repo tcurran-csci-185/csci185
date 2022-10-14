@@ -46,7 +46,8 @@ function setup() {
     let y = 150
     let pixelSize = 25
     let grid = frank;
-    while (i < frank.length) {
+
+    while (i < grid.length) {
         drawRow(grid[i], x, y, pixelSize);
         ++i;
         y+= pixelSize;
@@ -57,14 +58,26 @@ function setup() {
     // drawRow(frank[4], 150, 250, 25);
     // drawRow(frank[5], 150, 275, 25);
 
-    // first 6 rows of the heart
-     i = 0;
-     y = 350;
-    while (i < heart.length) {
-        drawRow(heart[i], 450, y, 15);
+    i = 0;
+    x = 450
+    y = 350
+    pixelSize = 15
+    grid = heart;
+    
+    while (i < grid.length) {
+        drawRow(grid[i], x, y, pixelSize);
         ++i;
-        y+= 15;
+        y+= pixelSize;
     }
+    
+    // first 6 rows of the heart
+    //  i = 0;
+    //  y = 350;
+    // while (i < heart.length) {
+    //     drawRow(heart[i], 450, y, 15);
+    //     ++i;
+    //     y+= 15;
+    // }
     // drawRow(heart[0], 450, 350, 15);
     // drawRow(heart[1], 450, 365, 15);
     // drawRow(heart[2], 450, 380, 15);
