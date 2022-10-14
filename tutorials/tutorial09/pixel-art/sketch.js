@@ -36,39 +36,48 @@ function setup() {
     createCanvas(canvasWidth, canvasHeight);
     drawGrid(canvasWidth, canvasHeight);
 
+    drawPixelArt(heart, 20, 20, 15);
+    drawPixelArt(frank, 120, 250, 12);
+    drawPixelArt(heart, 420, 250, 8);
+    drawPixelArt(heart, 55, 415, 6);
+    drawPixelArt(heart, 350, 135, 5);
+    drawPixelArt(frank, 315, 380, 15);
+    drawPixelArt(frank, 420, 10, 10);
+
+
     // first 6 rows of frank
     // wrap this line in a while loop
     // What changes each time?
     // *which row prints
     // the y increases by the pixel size
-    let i = 0;
-    let x = 50
-    let y = 150
-    let pixelSize = 25
-    let grid = frank;
+    // let i = 0;
+    // let x = 50
+    // let y = 150
+    // let pixelSize = 25
+    // let grid = frank;
 
-    while (i < grid.length) {
-        drawRow(grid[i], x, y, pixelSize);
-        ++i;
-        y+= pixelSize;
-    }
+    // while (i < grid.length) {
+    //     drawRow(grid[i], x, y, pixelSize);
+    //     ++i;
+    //     y+= pixelSize;
+    // }
     // drawRow(frank[1], 150, 175, 25);
     // drawRow(frank[2], 150, 200, 25);
     // drawRow(frank[3], 150, 225, 25);
     // drawRow(frank[4], 150, 250, 25);
     // drawRow(frank[5], 150, 275, 25);
 
-    i = 0;
-    x = 450
-    y = 350
-    pixelSize = 15
-    grid = heart;
-    
-    while (i < grid.length) {
-        drawRow(grid[i], x, y, pixelSize);
-        ++i;
-        y+= pixelSize;
-    }
+    // i = 0;
+    // x = 450
+    // y = 350
+    // pixelSize = 15
+    // grid = heart;
+
+    // while (i < grid.length) {
+    //     drawRow(grid[i], x, y, pixelSize);
+    //     ++i;
+    //     y+= pixelSize;
+    // }
     
     // first 6 rows of the heart
     //  i = 0;
@@ -86,6 +95,17 @@ function setup() {
     // drawRow(heart[5], 450, 425, 15);
 
 }
+
+function drawPixelArt(grid, x, y, pixelSize) {
+    // your function body here
+    let i = 0
+    while (i < grid.length) {
+        drawRow(grid[i], x, y, pixelSize);
+        ++i;
+        y+= pixelSize;
+    }
+}
+
 
 function drawRow (row, topX, topY, pixelWidth) {
 
