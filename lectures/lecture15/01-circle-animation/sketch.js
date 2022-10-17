@@ -7,28 +7,70 @@
 //     {x: 350, y: 350, d: 70, speedX: 1, speedY: 1}
 // ];
 
+// detect width and height of window
 const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight; 
 
 // set up the canvas:
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
+let i = 0;
+while(i < 100) {
+    const ball1 = {
+        x: randomIntFromInterval (300,500),
+        // multiply by range and shift with addition
+        y: randomIntFromInterval (1,canvasHeight),
+        d: randomIntFromInterval (10,500),
+        speedX: randomIntFromInterval (2,5),
+        speedY: randomIntFromInterval (2,5),
+    };
+    i++;
+    circle(ball.x ,ball.y ,ball.d);
+}
 }
 
+//fix somehow?? only drawing 
+
 // initialize variables outside of the function:
-let x = 0;
-let y = 0;
-let d = 50;
-let speedX = 3;
-let speedY = 2;
+// let x = 0;
+// let y = 0;
+// let d = 50;
+// let speedX = 3;
+// let speedY = 2;
+
+//"converting to an object"
+const ball = {
+    x: randomIntFromInterval (0,1000),
+    // multiply by range and shift with addition
+    y: randomIntFromInterval (100,500),
+    d: randomIntFromInterval (10,500),
+    speedX: randomIntFromInterval (2,5),
+    speedY: randomIntFromInterval (2,5),
+};
+
+// "very important for homwork4"
+
+function randomIntFromInterval(min, max) { 
+    // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 // animate the circle by changing the x and y position
 // every time the animation loop invokes the draw() function:
-function draw() {
-    clear();
-    fill('hotpink');
-    circle(x, y, d);
-    x += speedX;
-    y += speedY;
-    drawGrid(canvasWidth, canvasHeight);
-}
+// function draw() {
+//     clear();
+//     fill('hotpink');
+//     // circle(x, y, d);
+//     circle(ball1.x, ball1.y, ball1.d);
+//     // x += speedX;
+//     // y += speedY;
+//     //d += speedY*speedX;
+//     //d += 1
+//     ball1.x += ball1.speedX;
+//     ball1.y += ball1.speedY;
+//     // ball1.d += d;
+
+//     drawGrid(canvasWidth, canvasHeight);
+// }
+
+// garbled, review at home
