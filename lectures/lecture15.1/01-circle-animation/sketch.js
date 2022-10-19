@@ -17,6 +17,7 @@ const ball = {
     d: 50,
     speedX: 3,
     speedY: 2,
+    fillColor: 'pink',
 };
 
 
@@ -37,30 +38,39 @@ const ball = {
 // This is a list of objects
 // The brackets indicate that it is a list of objects
 const circleData = [
-    {x: 500, y: 50, d: 100, speedX: 3, speedY: 3},
-    {x: 300, y: 150, d: 50, speedX: 2, speedY: 0},
-    {x: 400, y: 400, d: 25, speedX: 0, speedY: 1},
-    {x: 40, y: 520, d: 80, speedX: 2, speedY: 0},
-    {x: 140, y: 120, d: 150, speedX: 0, speedY: -0.5},
-    {x: 350, y: 350, d: 70, speedX: 1, speedY: 1}
+    {x: 500, y: 50, d: 100, speedX: 3, speedY: 3, fillColor:'grey'},
+    {x: 300, y: 150, d: 50, speedX: 2, speedY: 0, fillColor:'dimgrey'},
+    {x: 400, y: 400, d: 25, speedX: 0, speedY: 1, fillColor:'black'},
+    {x: 40, y: 520, d: 80, speedX: 2, speedY: 0, fillColor:'skyblue'},
+    {x: 140, y: 120, d: 150, speedX: 0, speedY: -0.5, fillColor:'teal'},
+    {x: 350, y: 350, d: 70, speedX: 1, speedY: 1, fillColor:'pink'},
 ];
 //Use object functions (from const Ball) in variables
 // previously (x, y, d) now (ball.x, ball.y, ball.d)
 function draw() {
     clear();
-    fill('hotpink');
 
     //added counter
-    let x = 0;
+    // let x = 0;
 
     //added while loop (broke it at this point)
     // fixed by adding x++ and "const ball = circleData[x];"
-    while (x < circleData.length) {
+    // while (x < circleData.length) {
+    
+    // Set color for each circle
+    // fix fill color :'[
+    // see lecture recording @ 30ish mins
+
+    // creating a for loop instead of a while loop
+    // see lecture slide to compare 
+    for(let x = 0; x < circleData.length; x++) {
+    fill('hotpink');
     const ball = circleData[x];
-    circle(ball.x, ball.y, ball.d);
+
+    circle(ball.x, ball.y, ball.d,);
     ball.x += ball.speedX;
     ball.y += ball.speedY;
-    x++;
+    //x++;
     }
     
     drawGrid(canvasWidth, canvasHeight);
