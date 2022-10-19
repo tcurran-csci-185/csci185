@@ -73,5 +73,5 @@ function randomIntFromInterval(min, max) {
 //     drawGrid(canvasWidth, canvasHeight);
 // }
 
-// garbled, review at home
+// garbled, review at home (see lecture recording)
 // should generate "bubbles"
