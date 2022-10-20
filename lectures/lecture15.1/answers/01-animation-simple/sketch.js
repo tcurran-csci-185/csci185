@@ -11,28 +11,20 @@ const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight; 
 
 function setup() {
-    createCanvas(canvasWidth, canvasHeight);
-    fill('hotpink');
-    let i = 0;
-    while (i < circleData.length) {
-        const item = circleData[i];
-        circle(item.x, item.y, item.d);
-        i++;
-    }
-    drawGrid(canvasWidth, canvasHeight);
+    createCanvas(canvasWidth, canvasHeight); 
 }
-
+ 
 function draw() {
+    
+    drawGrid(canvasWidth, canvasHeight);
 
     fill('hotpink');
-    let i = 0;
-    while (i < circleData.length) {
+
+    for (i = 0; i < circleData.length; i++) {
         const item = circleData[i];
         item.x += item.speedX;
         item.y += item.speedY;
         circle(item.x, item.y, item.d);
-        i++;
     }
-    drawGrid(canvasWidth, canvasHeight);
 
 }
