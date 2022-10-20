@@ -60,6 +60,14 @@ const c7 = {
     color: '#8002d5'
 };
 
+const c8 = {
+    x: canvasWidth +100,
+    y: 785,
+    width: 200,
+    speed: -144,
+    color: '#8002d5'
+};
+
 // required to set up the canvas:
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
@@ -79,6 +87,8 @@ function draw() {
     c5.x += c5.speed;
     c6.x += c6.speed;
     c7.x += c7.speed;
+    c8.x += c8.speed;
+
 
     if (c1.x > canvasWidth + c1.width + 100) {
         c1.x = -100
@@ -107,6 +117,10 @@ function draw() {
     if (c7.x > canvasWidth + c7.width + 100) {
         c7.x = -100;
     }
+
+    if (c8.x < 0 - c8.width) {
+        c8.x = canvasWidth + c8.width
+    }
    
     // redraw the car:
     drawCar(c1.x, c1.y, c1.width, c1.color);
@@ -124,6 +138,9 @@ function draw() {
     drawCreature(c4.x -144, c4.y -150, 100, 'white', 'black');
     
     drawCreature(c4.x + 50, c4.y -90, 29, 'white', 'black');
+    
+    drawCar(c8.x, c8.y, c8.width, c8.color);
+    
     drawGrid(canvasWidth, canvasHeight);
 
 }
