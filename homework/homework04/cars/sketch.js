@@ -1,7 +1,7 @@
 // I wish I didn't do this like a troglodyte... but it's done I guess
 
 const canvasWidth = window.innerWidth;
-const canvasHeight = window.innerHeight; 
+const canvasHeight = window.innerHeight + 200; 
 
 // feel free to change these values as you like!
 const c1 = {
@@ -54,15 +54,15 @@ const c6 = {
 
 const c7 = {
     x: -100,
-    y: 1185,
+    y: window.innerHeight +185,
     width: 200,
-    speed: 9,
-    color: '#8002d5'
+    speed: 144,
+    color: '#FFCB00'
 };
 
 const c8 = {
     x: canvasWidth +100,
-    y: 1185,
+    y: window.innerHeight +85,
     width: 200,
     speed: -144,
     color: '#8002d5'
@@ -139,7 +139,9 @@ function draw() {
     
     drawCreature(c4.x + 50, c4.y -90, 29, 'white', 'black');
     
+    // This is kinda nauseating 
     drawCar(c8.x, c8.y, c8.width, c8.color);
+    drawCar(c7.x, c7.y, c7.width, c7.color);
     
     drawGrid(canvasWidth, canvasHeight);
 
