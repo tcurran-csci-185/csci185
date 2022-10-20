@@ -124,21 +124,24 @@ function draw() {
    
     // redraw the car:
     drawCar(c1.x, c1.y, c1.width, c1.color);
-    drawCreature(c1.x, c1.y - 65, 29, 'white', 'black');
+        drawCreature(c1.x, c1.y - 65, 29, 'white', 'black');
+
     drawCar(c2.x, c2.y, c2.width, c2.color);
-    drawCreature(c2.x -40 , c2.y - 65, 29, 'white', 'black');
+        drawCreature(c2.x -40 , c2.y - 65, 29, 'white', 'black');
+
     drawCar(c3.x, c3.y, c3.width, c3.color);
+        drawCreature(c3.x, c3.y -65, 29, 'white', 'black');
+
     drawCabOver(c4.x, c4.y, c4.width, c4.color);
+        drawCreature(c4.x -144, c4.y -150, 100, 'white', 'black');
+        drawCreature(c4.x + 50, c4.y -90, 29, 'white', 'black');
+
     drawCar(c5.x, c5.y, c5.width, c5.color);
-    drawCreature(c5.x, c5.y - 65, 29, 'white', 'black');
+        drawCreature(c5.x, c5.y - 65, 29, 'white', 'black');
+
     drawCar(c6.x, c6.y, c6.width, c6.color);
-    drawCreature(c6.x -40 , c6.y - 65, 29, 'white', 'black');
-    drawCreature(c3.x, c3.y -65, 29, 'white', 'black');
-    
-    drawCreature(c4.x -144, c4.y -150, 100, 'white', 'black');
-    
-    drawCreature(c4.x + 50, c4.y -90, 29, 'white', 'black');
-    
+        drawCreature(c6.x -40 , c6.y - 65, 29, 'white', 'black');
+     
     // This is kinda nauseating 
     drawCar(c8.x, c8.y, c8.width, c8.color);
     drawCar(c7.x, c7.y, c7.width, c7.color);
