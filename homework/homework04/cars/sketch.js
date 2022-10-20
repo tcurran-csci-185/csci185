@@ -62,7 +62,7 @@ const c7 = {
 
 const c8 = {
     x: canvasWidth +100,
-    y: 785,
+    y: 1185,
     width: 200,
     speed: -144,
     color: '#8002d5'
