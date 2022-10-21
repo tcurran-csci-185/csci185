@@ -20,8 +20,8 @@ function draw() {
     if (doJump) {
         // animate for one Math.sin cycle, then 
         // turn doJump variable to false
-        const jumpHeight = -15;
-        const jumpSpeed = 5;
+        const jumpHeight = -5;
+        const jumpSpeed = 20 ;
         y += jumpHeight * Math.sin(counter / jumpSpeed); 
         counter++;
         if (y > initialY) {
