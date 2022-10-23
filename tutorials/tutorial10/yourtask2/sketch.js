@@ -12,17 +12,16 @@ const face = [
     
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
+    frameRate(60)
 
-    drawGrid(canvasWidth, canvasHeight);
+    // drawGrid(canvasWidth, canvasHeight);
 }
 
 // This section is from the waves demo
 c = 0;
 function draw() {
-    clear();
-    
+    // clear();
     drawCreature(face[0].centerX, face[0].centerY, face[0].size);
-    // uses the counter and the sin function to update the position 
     face[0].centerY += 5 * Math.sin(c / 9);
     face[0].centerX += 9;
 
@@ -38,7 +37,6 @@ function draw() {
     face[3].centerY += 5 * Math.sin(c / 9);
     face[3].centerX += -9;
 
-    //loop ball 2 back to the beginning if it gets to the end:
     if (face[1].centerX > canvasWidth + face[1].size) {
         face[1].centerX = -face[1].size;
     }
@@ -51,10 +49,19 @@ function draw() {
     if (face[3].centerX < 0 - face[3].size) {
         face[3].centerX = 0 + canvasWidth + face[3].size;
     }
+    // if (c > 10) {
+    //     c = -c;
+    // }
 
     c++; // don't forget to increment the counter
+    console.log(c)
 }
 
+function mouseClicked() {
+    clear();
+    drawCreature(face[0].canvasWidth, face[0].centerY, face[0].size);
+
+}
 
 
 
