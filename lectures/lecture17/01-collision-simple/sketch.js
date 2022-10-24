@@ -1,18 +1,21 @@
 const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight;
 
+// these are "Data Objects"
 const player = { x: 650, y: 400, d: 150, color: 'teal', originalColor: 'teal' };
 const ball = { x: 450, y: 300, d: 50, color: 'hotpink', originalColor: 'hotpink' };
 
 
-// SETUP FUNCTION
+// SETUP FUNCTION -- creates the canvas
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
 }
 
 // ANIMATION LOOP FUNCTION
+// -- draw 60 times a second
+// -- 
 function draw() {
-    frameRate(10);
+    frameRate(60);
     clear();
     
     // draw the player:
