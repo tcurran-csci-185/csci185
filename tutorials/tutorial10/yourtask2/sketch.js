@@ -10,11 +10,34 @@ const face = [
 ]
 
     
-function setup() {
-    createCanvas(canvasWidth, canvasHeight);
-    frameRate(60)
+// function setup() {
+//     createCanvas(canvasWidth, canvasHeight);
 
-    // drawGrid(canvasWidth, canvasHeight);
+//     // drawGrid(canvasWidth, canvasHeight);
+
+//     for (let c = 0; c < 9999; c++) {
+//         strokeWeight(0);
+//         fill('white');
+//             const x = Math.random() * canvasWidth;
+//             const y = Math.random() * canvasHeight;
+//             const width = Math.random() * .9 + 0.333;
+//             circle(x, y, width);
+//         }
+// }
+
+async function setup() {
+    createCanvas(canvasWidth, canvasHeight);
+
+for (let c = 0; c < 9999; c++) {
+    strokeWeight(0);
+    fill('white');
+        const x = Math.random() * canvasWidth;
+        const y = Math.random() * canvasHeight;
+        const width = Math.random() * .9 + 0.333;
+        circle(x, y, width);
+    }
+
+    noCursor()
 }
 
 // This section is from the waves demo
@@ -37,6 +60,14 @@ function draw() {
     face[3].centerY += 5 * Math.sin(c / 9);
     face[3].centerX += -9;
 
+    drawCreature(mouseX - face[0].size / 2 , mouseY  - face[0].size / 2, face[0].size);
+    // face[0].centerY += 5 * Math.sin(c / 9);
+    // face[0].centerX += 9;
+
+
+    // line(mouseX, 0, mouseX, canvasHeight); 
+    // line(0, mouseY, canvasWidth, mouseY);
+
     if (face[1].centerX > canvasWidth + face[1].size) {
         face[1].centerX = -face[1].size;
     }
@@ -58,12 +89,17 @@ function draw() {
 }
 
 function mouseClicked() {
-    clear();
-    drawCreature(face[0].canvasWidth, face[0].centerY, face[0].size);
+ clear();
+    for (let c = 0; c < 9999; c++) {
+        strokeWeight(0);
+        fill('white');
+            const x = Math.random() * canvasWidth;
+            const y = Math.random() * canvasHeight;
+            const width = Math.random() * .9 + 0.333;
+            circle(x, y, width);
+        }
 
 }
-
-
 
 // replace this function with YOUR creature!
 function drawCreature(centerX, centerY, size, primaryColor='white', secondaryColor='black') {
