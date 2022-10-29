@@ -9,22 +9,6 @@ const face = [
     
 ]
 
-    
-// function setup() {
-//     createCanvas(canvasWidth, canvasHeight);
-
-//     // drawGrid(canvasWidth, canvasHeight);
-
-//     for (let c = 0; c < 9999; c++) {
-//         strokeWeight(0);
-//         fill('white');
-//             const x = Math.random() * canvasWidth;
-//             const y = Math.random() * canvasHeight;
-//             const width = Math.random() * .9 + 0.333;
-//             circle(x, y, width);
-//         }
-// }
-
 async function setup() {
     createCanvas(canvasWidth, canvasHeight);
 
@@ -39,11 +23,8 @@ for (let c = 0; c < 9999; c++) {
 
     noCursor()
 }
-
-// This section is from the waves demo
 c = 0;
 function draw() {
-    // clear();
     drawCreature(face[0].centerX, face[0].centerY, face[0].size);
     face[0].centerY += 5 * Math.sin(c / 9);
     face[0].centerX += 9;
@@ -61,12 +42,6 @@ function draw() {
     face[3].centerX += -9;
 
     drawCreature(mouseX - face[0].size / 2 , mouseY  - face[0].size / 2, face[0].size);
-    // face[0].centerY += 5 * Math.sin(c / 9);
-    // face[0].centerX += 9;
-
-
-    // line(mouseX, 0, mouseX, canvasHeight); 
-    // line(0, mouseY, canvasWidth, mouseY);
 
     if (face[1].centerX > canvasWidth + face[1].size) {
         face[1].centerX = -face[1].size;
@@ -80,11 +55,7 @@ function draw() {
     if (face[3].centerX < 0 - face[3].size) {
         face[3].centerX = 0 + canvasWidth + face[3].size;
     }
-    // if (c > 10) {
-    //     c = -c;
-    // }
-
-    c++; // don't forget to increment the counter
+    c++;
     console.log(c)
 }
 
@@ -101,7 +72,6 @@ function mouseClicked() {
 
 }
 
-// replace this function with YOUR creature!
 function drawCreature(centerX, centerY, size, primaryColor='white', secondaryColor='black') {
     fill('grey')
     square(centerX + size * .09, centerY + size  * .09, size * 1.02); 
