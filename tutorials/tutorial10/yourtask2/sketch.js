@@ -9,22 +9,53 @@ const face = [
     
 ]
 
+const nonagon = [
+    { x: canvasWidth/3, y: canvasHeight/3, radius: 99, npoints: 9, fillColor:'#8002d5'},
+    { x: canvasWidth - canvasWidth/3, y: canvasHeight/3, radius: 99, npoints:9, fillColor:'#E66000'},
+    { x: canvasWidth - canvasWidth/2, y: canvasHeight - canvasHeight/9, radius:99, npoints:9, fillColor:'#FFCB00'},
+]
+
 async function setup() {
     createCanvas(canvasWidth, canvasHeight);
 
-for (let c = 0; c < 9999; c++) {
-    strokeWeight(0);
-    fill('white');
-        const x = Math.random() * canvasWidth;
-        const y = Math.random() * canvasHeight;
-        const width = Math.random() * .9 + 0.333;
-        circle(x, y, width);
-    }
 
-    noCursor()
+    for (let c = 0; c < 333; c++) {
+        strokeWeight(0);
+            const x = Math.random() * canvasWidth;
+            const y = Math.random() * canvasHeight;
+            const radius = Math.random() * 6;
+            drawLandscapeObject(x, y, radius, 5, '#00539F');
+        }
+        for (let c = 0; c < 333; c++) {
+            strokeWeight(0);
+                const x = Math.random() * canvasWidth;
+                const y = Math.random() * canvasHeight;
+                const radius = Math.random() * 3;
+                drawLandscapeObject(x, y, radius, 6, '#0095DD');
+            }
+            for (let c = 0; c < 333; c++) {
+                strokeWeight(0);
+                    const x = Math.random() * canvasWidth;
+                    const y = Math.random() * canvasHeight;
+                    const radius = Math.random() * 3;
+                    drawLandscapeObject(x, y, radius, 7, '#002147');
+                }
+    
+
+    drawLandscapeObject(canvasWidth/2, canvasHeight/2, 333, 9, '#000');
+    
+    // drawLandscapeObject(canvasWidth/3, canvasHeight/3, 99, 9, '#8002d5');
+
+    // drawLandscapeObject(canvasWidth - canvasWidth/3, canvasHeight/3, 99, 9, '#E66000');
+
+    // drawLandscapeObject(canvasWidth - canvasWidth/2, canvasHeight - canvasHeight/9, 99, 9, '#FFCB00');
+
 }
 c = 0;
 function draw() {
+
+    
+
     drawCreature(face[0].centerX, face[0].centerY, face[0].size);
     face[0].centerY += 5 * Math.sin(c / 9);
     face[0].centerX += 9;
@@ -41,7 +72,11 @@ function draw() {
     face[3].centerY += 5 * Math.sin(c / 9);
     face[3].centerX += -9;
 
-    drawCreature(mouseX - face[0].size / 2 , mouseY  - face[0].size / 2, face[0].size);
+    drawLandscapeObject(nonagon[0].x, nonagon[0].y, nonagon[0].radius, nonagon[0].npoints, nonagon[0].fillColor);
+  
+    drawLandscapeObject(nonagon[1].x, nonagon[1].y, nonagon[1].radius, nonagon[1].npoints, nonagon[1].fillColor);
+
+    drawLandscapeObject(nonagon[2].x, nonagon[2].y, nonagon[2].radius, nonagon[2].npoints, nonagon[2].fillColor);
 
     if (face[1].centerX > canvasWidth + face[1].size) {
         face[1].centerX = -face[1].size;
@@ -55,21 +90,10 @@ function draw() {
     if (face[3].centerX < 0 - face[3].size) {
         face[3].centerX = 0 + canvasWidth + face[3].size;
     }
+    
+
     c++;
     console.log(c)
-}
-
-function mouseClicked() {
- clear();
-    for (let c = 0; c < 9999; c++) {
-        strokeWeight(0);
-        fill('white');
-            const x = Math.random() * canvasWidth;
-            const y = Math.random() * canvasHeight;
-            const width = Math.random() * .9 + 0.333;
-            circle(x, y, width);
-        }
-
 }
 
 function drawCreature(centerX, centerY, size, primaryColor='white', secondaryColor='black') {
@@ -101,4 +125,17 @@ function drawCreature(centerX, centerY, size, primaryColor='white', secondaryCol
     fill(primaryColor);
     rect(centerX + size * .32, centerY + size, size * .78, size * .1); 
 
+}
+
+function drawLandscapeObject(x, y, radius, npoints, fillColor="white") {
+    let angle = TWO_PI / npoints;
+    fill(fillColor)
+    beginShape();
+    for (let a = 0; a < TWO_PI; a += angle) {
+      let sx = x + cos(a) * radius;
+      let sy = y + sin(a) * radius;
+      vertex(sx, sy);
+    
+    }
+    endShape(CLOSE);
 }
