@@ -1,3 +1,10 @@
+// TO DO:
+// finish warp function
+// add some keyboard events
+// periodic color change
+// clean up unused code / improve readability
+
+
 const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight; 
 
@@ -52,10 +59,12 @@ async function setup() {
 
 }
 c = 0;
+
+// finish warp function
+let warp = 0
 function draw() {
 
-    
-
+    frameRate(60 + warp)
     drawCreature(face[0].centerX, face[0].centerY, face[0].size);
     face[0].centerY += 5 * Math.sin(c / 9);
     face[0].centerX += 9;
@@ -90,8 +99,6 @@ function draw() {
     if (face[3].centerX < 0 - face[3].size) {
         face[3].centerX = 0 + canvasWidth + face[3].size;
     }
-    
-
     c++;
     console.log(c)
 }
