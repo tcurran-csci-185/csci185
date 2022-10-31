@@ -1,5 +1,5 @@
 // TO DO: SEND IT
-// clean up unused code / improve readability
+// I think this could be organized better...
 
 const canvasWidth = window.innerWidth;
 const canvasHeight = window.innerHeight - 10; 
@@ -51,6 +51,7 @@ let warp = 60
 function mouseDragged() {
     warp = 1 + mouseX / 10; 
 }
+
 function keyLog(ev) {
     console.log(ev.code);
     if (ev.code == 'KeyW') {
@@ -82,10 +83,6 @@ function keyLog(ev) {
         face[2].size = face[0].size - 1 ;
         if (face[3].size > 3)
         face[3].size = face[0].size - 1 ;
-    } else if (ev.code == 'Space') {
-        width += 2;
-    } else if (ev.code == 'Escape') {
-        width -= 2;
     } else if (ev.code == 'KeyI'){
         drawCreature(face[0].centerX, face[0].centerY, face[0].size);
         face[0].centerY += 5 * Math.cos(c / 9);
