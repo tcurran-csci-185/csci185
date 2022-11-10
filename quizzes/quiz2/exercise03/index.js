@@ -17,7 +17,9 @@ const photos = [
     { image_url: 'images/daisy1.jpg', is_favorite: true }
 ];
 
-// write a program, using any kind of loop you want, 
-// that draws all of the pictures to the screen 
-// where the is_favorite property is set to true. 
-// 8 photos should be displayed.
+const showFlower = document.querySelector('.images');
+
+for (let c = 0; c < photos.length; c++) {
+    if(photos[c].is_favorite == true)
+showFlower.innerHTML += `<img src="${photos[c].image_url}" />`;
+}
