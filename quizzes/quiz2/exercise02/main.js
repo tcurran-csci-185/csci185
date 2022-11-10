@@ -19,8 +19,8 @@ function drawElmo(x, y, size, color, hasNose) {
     circle(x + .13 * size, y - .13 * size, size * .2)
     circle(x - .13 * size, y - .13 * size, size * .2)
     fill('black')
-    circle(x + .13 * size, y - .13 * size, size * .13)
-    circle(x - .13 * size, y - .13 * size, size * .13)
+    circle(x + .13 * size, y - .13 * size, size * .1555)
+    circle(x - .13 * size, y - .13 * size, size * .1555)
 
     if(hasNose == true){
     fill('#db5461');
