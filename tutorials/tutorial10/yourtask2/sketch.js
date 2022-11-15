@@ -12,8 +12,8 @@ const face = [
 ]
 
 const nonagon = [
-    { x: canvasWidth/3, y: canvasHeight/3, radius: 99, npoints: 9, fillColor:'#8002d5'},
-    { x: canvasWidth - canvasWidth/3, y: canvasHeight/3, radius: 99, npoints:9, fillColor:'#E66000'},
+    { x: canvasWidth/3.33, y: canvasHeight/3.33, radius: 99, npoints: 9, fillColor:'#8002d5'},
+    { x: canvasWidth - canvasWidth/3.33, y: canvasHeight/3.33, radius: 99, npoints:9, fillColor:'#E66000'},
     { x: canvasWidth - canvasWidth/2, y: canvasHeight - canvasHeight/9, radius:99, npoints:9, fillColor:'#FFCB00'},
 ]
 
