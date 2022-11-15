@@ -50,13 +50,21 @@ let warp = 60
 
 function mouseDragged() {
     warp = 1 + mouseX / 10; 
+    if (warp == 1){
+        console.log('minwarp');
+    }
 }
 
 function keyLog(ev) {
     console.log(ev.code);
     if (ev.code == 'KeyW') {
         console.log('warpUp');
-        warp = warp + 3;
+        if (warp <= 360){
+            warp = warp + 3;
+        } else if (warp >= 360){
+            warp = 360 
+            console.log('max warp')
+        }
     } else if (ev.code == 'KeyS') {
         console.log('warpDown');
         if (warp > 15){
@@ -145,6 +153,7 @@ function draw() {
     }
 
     c++;
+    console.log(warp)
 }
 
 function drawCreature(centerX, centerY, size, primaryColor='white', secondaryColor='black') {
