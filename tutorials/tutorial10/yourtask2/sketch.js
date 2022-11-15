@@ -19,7 +19,7 @@ const nonagon = [
 
 async function setup() {
     createCanvas(canvasWidth, canvasHeight);
-
+drawLandscapeObject(canvasWidth/2, canvasHeight/2, 333, 9, '#000');
     for (let c = 0; c < 333; c++) {
         strokeWeight(0);
             const x = Math.random() * canvasWidth;
@@ -42,7 +42,7 @@ async function setup() {
                     drawLandscapeObject(x, y, radius, 7, '#002147');
                 }
     
-    drawLandscapeObject(canvasWidth/2, canvasHeight/2, 333, 9, '#000');
+
 }
 
 c = 0;
