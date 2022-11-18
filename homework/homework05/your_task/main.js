@@ -13,6 +13,14 @@ function search (ev) {
 }
 
 async function getTracks (term) {
+    
+    let trackEndpoint = baseURL + "?";
+    trackEndpoint += "q=" + term + "&type=track";
+    console.log(trackEndpoint);
+
+    const trackData = await fetch(trackEndpoint).then(response => response.json());
+    console.log(trackData);
+    
     console.log(`
         get tracks from spotify based on the search term
         "${term}" and load them into the #tracks section 
@@ -20,6 +28,14 @@ async function getTracks (term) {
 }
 
 async function getAlbums (term) {
+    
+    let albumEndpoint = baseURL + "?";
+    albumEndpoint += "q=" + term + "&type=album";
+    console.log(albumEndpoint);
+
+    const albumData = await fetch(albumEndpoint).then(response => response.json());
+    console.log(albumData);
+    
     console.log(`
         get albums from spotify based on the search term
         "${term}" and load them into the #albums section 
@@ -27,10 +43,26 @@ async function getAlbums (term) {
 }
 
 async function getArtist (term) {
+    
+    let artistEndpoint = baseURL + "?";
+    artistEndpoint += "q=" + term + "&type=artist";
+    console.log(artistEndpoint);
+
+    const artistData = await fetch(artistEndpoint).then(response => response.json());
+    // console.log(artistData);
+    console.log(artistData[0].name);
+    console.log(artistData[0].image_url)
+
     console.log(`
         get artists from spotify based on the search term
         "${term}" and load the first artist into the #artist section 
         of the DOM...`);
+
+    document.querySelector('#artist-section h1').innerHTML = artistData[0].name;
+    // document.querySelector('#artist img').innerHTML = src = artistData[0].image_url;
+    const html = `<img src="${artistData[0].image_url}" />`;
+    document.querySelector('#artist').innerHTML = html;
+    console.log(html)
 };
 
 
