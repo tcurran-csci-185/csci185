@@ -13,9 +13,9 @@ body {
   }
   .grid-item {
     /* background-color: rgba(255, 255, 255, 0.8); */
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 
@@ -65,5 +65,25 @@ body {
   
   .words span:nth-child(7) {
     animation-delay: 3s;
+  }
+  
+  .button {
+    background-color: #6200a4;
+    box-shadow: #333;
+    border: none;
+    color: black;
+    padding: 1% 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3rem;
+    /* margin: 4px 2px; */
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #6200a4;
+    color: white;
   }
   
