@@ -24,11 +24,25 @@ async function getTracks (term) {
     console.log(trackData[0].name);
 
     document.querySelector('#tracks').innerHTML = trackData[0].name;
+
+    const template = `
+        <section class="track-item preview">
+            <img src="https://i.scdn.co/image/1aacaefb0ef07755e5a155d96ee7f1073063e428">
+            <i class="fas play-track fa-play" aria-hidden="true"></i>
+            <div class="label">
+                <h2>Black Swan</h2>
+                <p>
+                    BTS
+                </p>
+            </div>
+        </section>`;
     
     console.log(`
         get tracks from spotify based on the search term
         "${term}" and load them into the #tracks section 
         of the DOM...`);
+
+        document.querySelector('#tracks').innerHTML = template;
 }
 
 async function getAlbums (term) {
