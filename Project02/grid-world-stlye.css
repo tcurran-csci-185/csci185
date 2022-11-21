@@ -30,7 +30,7 @@ body {
   }
   
   .words span {
-    font-size: 9rem;
+    font-size: 7rem;
     display: inline-block;
     animation: move 3.33s ease-in-out infinite;
   }
