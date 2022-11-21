@@ -25,25 +25,51 @@ async function getTracks (term) {
 
     document.querySelector('#tracks').innerHTML = trackData[0].name;
 
+    let c = 0
+
+    while (c < 5) {
+
     const template = `
-        <section class="track-item preview">
-            <img src=${trackData[0].album.image_url}>
+        <section class="track-item preview" onclick = "playSong('${trackData[c].id}')">
+            <img src=${trackData[c].album.image_url}>
             <i class="fas play-track fa-play" aria-hidden="true"></i>
             <div class="label">
-                <h2>${trackData[0].name}</h2>
+                <h2>${trackData[c].name}</h2>
                 <p>
-                    ${trackData[0].artist.name}
+                    ${trackData[c].artist.name}
                 </p>
             </div>
         </section>`;
-    
+
+    // document.querySelector('#tracks').innerHTML = template;
+
+    document.querySelector('#tracks').insertAdjacentHTML('beforeend', template);
+
+    c++;
+
+    }
     console.log(`
         get tracks from spotify based on the search term
         "${term}" and load them into the #tracks section 
         of the DOM...`);
 
-        document.querySelector('#tracks').innerHTML = template;
 }
+
+function playSong (id) {
+
+    //create a variable to hold our Iframe
+    const template = `<iframe style="border-radius:12px" 
+    src="https://open.spotify.com/embed/track/${id}?utm_source=generator&theme=0" 
+    width="100%" 
+    height="352" 
+    frameBorder="0" 
+    allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy"></iframe>`;
+    // target the artist element and inject the template inside of the element 
+    document.querySelector('#artist').innerHTML = template;
+}
+    
 
 async function getAlbums (term) {
     
