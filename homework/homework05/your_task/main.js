@@ -20,6 +20,10 @@ async function getTracks (term) {
 
     const trackData = await fetch(trackEndpoint).then(response => response.json());
     console.log(trackData);
+
+    console.log(trackData[0].name);
+
+    document.querySelector('#tracks').innerHTML = trackData[0].name;
     
     console.log(`
         get tracks from spotify based on the search term
