@@ -42,7 +42,10 @@
 
   const screenInfo = (screen);
 
+  const navigatorInfo = (navigator)
+
 //   console.log(navigator.geolocation)
 //   console.log(GeolocationCoordinates)
-  document.querySelector(".output2").innerHTML = `${screenInfo}`
+  document.querySelector(".output2").innerHTML = `screen width in pixels: ${screenInfo.width}, 
+  screen height in pixels: ${screenInfo.height}, color depth in bits per pixel:  ${screenInfo.colorDepth} `
   
