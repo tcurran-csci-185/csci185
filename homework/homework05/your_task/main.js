@@ -27,12 +27,12 @@ async function getTracks (term) {
 
     const template = `
         <section class="track-item preview">
-            <img src="https://i.scdn.co/image/1aacaefb0ef07755e5a155d96ee7f1073063e428">
+            <img src=${trackData[0].album.image_url}>
             <i class="fas play-track fa-play" aria-hidden="true"></i>
             <div class="label">
-                <h2>Black Swan</h2>
+                <h2>${trackData[0].name}</h2>
                 <p>
-                    BTS
+                    ${trackData[0].artist.name}
                 </p>
             </div>
         </section>`;
