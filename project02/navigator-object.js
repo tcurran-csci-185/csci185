@@ -46,5 +46,5 @@
 //   console.log(navigator.geolocation)
 //   console.log(GeolocationCoordinates)
   document.querySelector(".output2").innerHTML = `screen width in pixels: ${screenInfo.width}, 
-  screen height in pixels: ${screenInfo.height}, color depth in bits per pixel:  ${screenInfo.colorDepth}, you're OS and cpu architecture are: ${navigator.platform}  `
+  screen height in pixels: ${screenInfo.height}, color depth in bits per pixel:  ${screenInfo.colorDepth}, your OS is: ${navigator.platform}  `
   
